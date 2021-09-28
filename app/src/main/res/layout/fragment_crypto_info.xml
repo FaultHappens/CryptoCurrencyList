@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".fragment.CryptoInfoFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cryptoInfoImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/crypto_logo"
+                tools:src="@drawable/user_default_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cryptoInfoName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:text="Name" />
+
+                <TextView
+                    android:id="@+id/cryptoInfoSymbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Symbol" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/cryptoInfoDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    tools:text="Bitcoin is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator." />
+
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/cryptoInfoListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cryptoListFragment">
+    <fragment
+        android:id="@+id/cryptoListFragment"
+        android:name="com.example.cryptocurrencylist.fragment.CryptoListFragment"
+        android:label="fragment_crypto_list"
+        tools:layout="@layout/fragment_crypto_list" >
+        <action
+            android:id="@+id/action_cryptoListFragment2_to_cryptoInfoFragment"
+            app:destination="@id/cryptoInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptoInfoFragment"
+        android:name="com.example.cryptocurrencylist.fragment.CryptoInfoFragment"
+        android:label="fragment_crypto_info"
+        tools:layout="@layout/fragment_crypto_info" >
+        <argument
+            android:name="cryptoId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/currencyListFragment"
+        android:name="com.example.cryptocurrencylist.fragment.CurrencyListFragment"
+        android:label="fragment_currency_list"
+        tools:layout="@layout/fragment_currency_list" >
+        <action
+            android:id="@+id/action_currencyListFragment2_to_currencyInfoFragment"
+            app:destination="@id/currencyInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currencyInfoFragment"
+        android:name="com.example.cryptocurrencylist.fragment.CurrencyInfoFragment"
+        android:label="fragment_currency_info"
+        tools:layout="@layout/fragment_currency_info" >
+        <argument
+            android:name="currencyId"
+            app:argType="string" />
+    </fragment>
+</navigation>

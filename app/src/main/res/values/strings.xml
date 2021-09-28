@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CryptoCurrencyList</string>
+    <string name="btn_refresh">REFRESH</string>
+    <string name="crypto_logo">cryptoLogo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cryptocurrency_logo">Cryptocurrency Logo</string>
+    <string name="refresh_str">REFRESH</string>
+    <string name="search_for_crypto">Search for Crypto</string>
+</resources>
